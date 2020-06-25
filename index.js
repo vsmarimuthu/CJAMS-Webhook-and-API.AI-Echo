@@ -52,7 +52,7 @@ restService.post("/createIntake", function (req, res) {
       richResponse: {
         items: [{
           simpleResponse: {
-            textToSpeech: ' <say-as interpret-as="verbatim">I202000459130</say-as>'
+            textToSpeech: ' <say-as interpret-as="spell-out">I202000459130</say-as>'
           }
         }]
       }
