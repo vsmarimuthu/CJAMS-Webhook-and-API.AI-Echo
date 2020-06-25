@@ -14,12 +14,38 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/createIntake", function (req, res) {
-  var speech =
+  var _communication =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
     req.body.queryResult.parameters.Communication ?
-    req.body.queryResult.parameters.Communication :
-    "Seems like some problem. Speak again.";
+    req.body.queryResult.parameters.Communication : "";
+
+    var _purpose =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.Purpose ?
+    req.body.queryResult.parameters.Purpose : "";
+
+    var _firstname =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.Firstname ?
+    req.body.queryResult.parameters.Firstname : "";
+
+    var _lastname =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.Lastname ?
+    req.body.queryResult.parameters.Lastname : "";
+
+    var _role =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.Role ?
+    req.body.queryResult.parameters.Role : "";
+
+
+    var speech='';
   var access_token = '';
   var speechResponse = {
     google: {
@@ -27,7 +53,7 @@ restService.post("/createIntake", function (req, res) {
       richResponse: {
         items: [{
           simpleResponse: {
-            textToSpeech: speech
+            textToSpeech: '_communication '+_communication+':: _purpose '+_purpose+':: _firstname'+_firstname+':: _lastname'+_lastname+':: _role'+_role
           }
         }]
       }
