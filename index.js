@@ -59,23 +59,7 @@ restService.post("/createIntake", function (req, res) {
 
 });
 
-function createIntake() {
-  request.post(
-    'https://d38mozb1nh16qd.cloudfront.net/api/providerapplicant/getproviderapplicant', {
-      json: {
-        "method": "post",
-        "where": {
-          "applicant_id": "A2020002012631"
-        }
-      }
-    },
-    function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-        return "Marimuthu";
-      }
-    }
-  );
-}
+
 restService.post("/audio", function (req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
