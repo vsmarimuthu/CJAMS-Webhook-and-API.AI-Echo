@@ -30,14 +30,13 @@ restService.post("/createIntake", function (req, res) {
     },
     function (error, response, body) {
       if (!error && response.statusCode == 200) {
-        access_token = response.body.id;
+        access_token = response.id;
         request(
           'https://api-re-cw.cardinalityai.xyz/api/Nextnumbers/getNextNumber?apptype=IntakeNumber',
 
           function (error, response, body) {
             if (!error && response.statusCode == 200) {
-              var apiNextNumber = JSON.parse(response.body);
-              speech = apiNextNumber.nextNumber;
+              speech = response.nextNumber;
               request.post(
                 'https://api-re-cw.cardinalityai.xyz/api/Intakedastagings/reviewIntake', {
                   headers: {
@@ -83,7 +82,7 @@ restService.post("/createIntake", function (req, res) {
                       "intakeDATypeDetails": [],
                       "General": {
                         "Time": "2020-06-25T12:12:12.480Z",
-                        "IntakeNumber": speech,
+                        "IntakeNumber": response.nextNumber,
                         "intakeservice": [],
                         "InputSource": "d1d7780d-a31a-4c23-826e-0495a64694bc",
                         "RecivedDate": "06/25/2020, 5:38:38 PM",
@@ -404,7 +403,7 @@ restService.post("/createIntake", function (req, res) {
                 },
                 function (error, response, body) {
                   if (!error && response.statusCode == 200) {
-
+                    speech = 'Hurray!!. Intake has been created with Intake number ' + speech
                     var speechResponse = {
                       google: {
                         expectUserResponse: true,
