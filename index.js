@@ -14,11 +14,11 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/createIntake", function (req, res) {
-  var _communication =
+  var _narrative =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.Communication ?
-    req.body.queryResult.parameters.Communication : "";
+    req.body.queryResult.parameters.Narrative ?
+    req.body.queryResult.parameters.Narrative : "";
 
     var _purpose =
     req.body.queryResult &&
@@ -110,7 +110,7 @@ restService.post("/createIntake", function (req, res) {
                         "Time": "2020-06-25T12:12:12.480Z",
                         "IntakeNumber": speech,
                         "intakeservice": [],
-                        "InputSource": _communication,
+                        "InputSource": "Email",
                         "RecivedDate": "06/25/2020, 5:38:38 PM",
                         "CreatedDate": "2020-06-25T12:08:38.430Z",
                         "Author": "Jacob John",
@@ -121,7 +121,7 @@ restService.post("/createIntake", function (req, res) {
                         "queAdditionDate": "2020-06-25T12:08:38.430Z",
                         "isacknowledgementletter": 1,
                         "Iscps": null,
-                        "Narrative": "<p>dsfds</p>",
+                        "Narrative": "<p>"+_narrative+"</p>",
                         "IsAnonymousReporter": false,
                         "IsUnknownReporter": false,
                         "RefuseToShareZip": false,
