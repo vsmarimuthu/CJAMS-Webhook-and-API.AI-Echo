@@ -110,7 +110,7 @@ restService.post("/createIntake", function (req, res) {
                         "Time": "2020-06-25T12:12:12.480Z",
                         "IntakeNumber": speech,
                         "intakeservice": [],
-                        "InputSource": "Email",
+                        "InputSource": "d1d7780d-a31a-4c23-826e-0495a64694bc",
                         "RecivedDate": "06/25/2020, 5:38:38 PM",
                         "CreatedDate": "2020-06-25T12:08:38.430Z",
                         "Author": "Jacob John",
