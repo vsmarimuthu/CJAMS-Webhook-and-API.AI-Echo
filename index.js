@@ -71,359 +71,111 @@ restService.post("/createIntake", function (req, res) {
                   json: {
                     "intake": {
                       "crossReference": [],
-                      "persons": [{
-                        "Pid": "0f63e4dc-7491-4479-965a-ad49d9bd4eae",
-                        "Lastname": "Andrew",
-                        "Firstname": "john",
-                        "Gender": "1282",
-                        "Dob": "09/23/2006",
-                        "Role": "CHILD",
-                        "RelationshiptoRA": "SELF",
-                        "Dangerousself": "no",
-                        "Dangerousworker": "no",
-                        "Mentealimpair": "no",
-                        "Mentealillness": "no",
-                        "ishousehold": "yes",
-                        "drugexposednewbornflag": 0,
-                        "fetalalcoholspctrmdisordflag": 0,
-                        "sexoffenderregisteredflag": 0,
-                        "probationsearchconductedflag": 0,
-                        "safehavenbabyflag": 0,
-                        "personRole": [{
-                          "rolekey": "CHILD",
-                          "description": "Child",
-                          "isprimary": "true",
-                          "relationshiptorakey": "SELF",
-                          "hidden": null
-                        }],
-                        "personAddressInput": [],
-                        "cjamspid": "100000210",
-                        "substances": [],
-                        "phoneNumber": [],
-                        "emailID": [],
-                        "fullName": "john Andrew"
-                      }],
-                      "reasonforDraft": [],
+                      "persons": [],
+                      "reasonforDraft": [
+                        {
+                          "time": 1593792499376
+                        },
+                        {
+                          "time": 1593792503129
+                        },
+                        {
+                          "time": 1593792503354
+                        },
+                        {
+                          "time": 1593792503543
+                        },
+                        {
+                          "time": 1593792503736
+                        },
+                        {
+                          "time": 1593792506547
+                        },
+                        {
+                          "time": 1593792512498
+                        },
+                        {
+                          "time": 1593792526718
+                        },
+                        {
+                          "time": 1593792527243
+                        }
+                      ],
                       "agency": "CW",
                       "intakeDATypeDetails": [],
                       "General": {
-                        "Time": "2020-06-25T12:12:12.480Z",
-                        "IntakeNumber": speech,
+                        "Time": "2020-07-03T16:08:47.243Z",
+                         "IntakeNumber": speech,
                         "intakeservice": [],
-                        "InputSource": "d1d7780d-a31a-4c23-826e-0495a64694bc",
-                        "RecivedDate": "06/25/2020, 5:38:38 PM",
-                        "CreatedDate": "2020-06-25T12:08:38.430Z",
-                        "Author": "Jacob John",
+                        "InputSource": "b5b40aa0-d2d9-4c04-a3f6-07ed304d904c",
+                        "RecivedDate": "7/3/2020, 9:38:16 PM",
+                        "CreatedDate": "2020-07-03T16:08:16.149Z",
+                        "Author": "Christina McCauley",
                         "Agency": "CW",
-                        "Purpose": "247a8b26-cdee-4ce8-b36e-b37e49fd0103~CW",
-                        "countyid": "7665ca54-5374-4174-be07-a687b811a82c",
+                        "Purpose": "247a8b26-cdee-4ce8-b36e-b37e49fd0103~undefined",
+                        "PurposeName": "Child Protective Services",
+                        "countyid": "e2c90cd0-a905-4cca-ad60-396ac2cfc41e",
                         "islocalreferal": 0,
-                        "queAdditionDate": "2020-06-25T12:08:38.430Z",
+                        "queAdditionDate": "2020-07-03T16:08:45.190Z",
+                        "servicerequest": [],
+                        "suggestedresource": [],
                         "isacknowledgementletter": 1,
                         "Iscps": null,
+                        "cpsHistoryClearance": null,
                         "Narrative": "<p>"+_narrative+"</p>",
                         "IsAnonymousReporter": false,
                         "IsUnknownReporter": false,
                         "RefuseToShareZip": false,
-                        "offenselocation": ""
+                        "offenselocation": "",
+                        "narrativeUpdatedDate": null,
+                        "communicationDescription": "Face to Face"
                       },
-                      "narrative": [{
+                      "narrative": [
+                        { 
                         "Firstname": _firstname,
-                        "Lastname":_lastname,
-                        "Middlename": "",
-                        "PhoneNumber": "",
-                        "ZipCode": "",
-                        "Role": _role
-                      }],
+                          "Lastname":_lastname,
+                          "Middlename": "",
+                          "PhoneNumber": "",
+                          "PhoneNumberExt": "",
+                          "ZipCode": "",
+                          "Role": _role,
+                          "RoleName": "",
+                          "organization": null,
+                          "title": null,
+                          "incidentlocation": "",
+                          "incidentdate": "",
+                          "isapproximate": false,
+                          "email": ""
+                        }
+                      ],
                       "evaluationFields": null,
                       "reviewstatus": {
-                        "appevent": "INTR",
-                        "status": "supreview",
-                        "commenttext": "test",
-                        "ispreintake": false,
-                        "assignsecurityuserid": "eba740d3-c238-4497-a660-3b7b09e12922",
-                        "ismanualrouting": true
+                        "appevent": "DRAFT",
+                        "status": "",
+                        "commenttext": "",
+                        "ispreintake": false
                       },
-                      "disposition": [{
-                        "ServiceRequestNumber": "I201900351313",
-                        "DaTypeKey": "247a8b26-cdee-4ce8-b36e-b37e49fd0103",
-                        "dispositioncode": "Scrnin",
-                        "DAStatus": "Review",
-                        "intakeMultipleDispositionDropdown": [{
-                          "text": "Close Case",
-                          "value": "Closed"
-                        }, {
-                          "text": "Pre Court Services",
-                          "value": "courtsrv"
-                        }, {
-                          "text": "Reject Case for legal insufficiency",
-                          "value": "rejected"
-                        }, {
-                          "text": "Screen In",
-                          "value": "Scrnin"
-                        }, {
-                          "text": "Screen Out",
-                          "value": "ScreenOUT"
-                        }, {
-                          "text": "Send to Court",
-                          "value": "sendcourt"
-                        }],
-                        "intakeserreqstatustypekey": "Review",
-                        "comments": "test",
-                        "intakeAction": "",
-                        "supStatus": "",
-                        "supComments": "",
-                        "reason": "",
-                        "caseID": "",
-                        "serviceTypeID": "",
-                        "supMultipleDispositionDropdown": []
-                      }],
+                      "disposition": null,
                       "createdCases": null,
                       "sdm": {
-                        "referralname": "",
-                        "referraldob": "2020-06-25T12:11:18.909Z",
-                        "referralid": "",
-                        "countyid": null,
+                        "isar": true,
                         "ismaltreatment": false,
-                        "maltreatment": "no",
-                        "childfatality": "no",
                         "ischildfatality": false,
-                        "isfcplacementsetting": false,
-                        "isprivateplacement": false,
-                        "islicenseddaycare": false,
-                        "isschool": false,
-                        "physicalAbuse": {
-                          "ismalpa_suspeciousdeath": false,
-                          "ismalpa_nonaccident": false,
-                          "ismalpa_injuryinconsistent": false,
-                          "ismalpa_insjury": false,
-                          "ismalpa_childtoxic": false,
-                          "ismalpa_caregiver": false
-                        },
-                        "sexualAbuse": {
-                          "ismalsa_sexualmolestation": false,
-                          "ismalsa_sexualact": false,
-                          "ismalsa_sexualexploitation": false,
-                          "ismalsa_physicalindicators": false
-                        },
-                        "generalNeglect": {
-                          "isneggn_suspiciousdeath": false,
-                          "isneggn_signsordiagnosis": false,
-                          "isneggn_inadequatefood": false,
-                          "isneggn_childdischarged": false
-                        },
-                        "arGeneralNeglect": {
-                          "isneggn_exposuretounsafe": false,
-                          "isneggn_inadequateclothing": false,
-                          "isneggn_inadequatesupervision": false,
-                          "isnegrh_treatmenthealthrisk": false
-                        },
-                        "isnegfp_cargiverintervene": false,
-                        "isnegab_abandoned": false,
-                        "unattendedChild": {
-                          "isneguc_leftunsupervised": false,
-                          "isneguc_leftaloneinappropriatecare": false,
-                          "isneguc_leftalonewithoutsupport": false
-                        },
-                        "riskofHarm": {
-                          "isnegrh_priordeath": false,
-                          "isnegrh_domesticviolence": false,
-                          "isnegrh_sexualperpetrator": false,
-                          "isnegrh_basicneedsunmet": false,
-                          "isnegrh_substantial_risk": false
-                        },
-                        "isnegmn_unreasonabledelay": false,
-                        "ismenab_psycologicalability": true,
-                        "ismenng_psycologicalability": true,
-                        "screeningRecommend": "Scrnin",
-                        "scnRecommendOveride": "",
-                        "screenOut": {
-                          "isscrnoutrecovr_insufficient": false,
-                          "isscrnoutrecovr_information": false,
-                          "isscrnoutrecovr_historicalinformation": false,
-                          "isscrnoutrecovr_otherspecify": false,
-                          "scrnout_description": ""
-                        },
-                        "screenIn": {
-                          "isscrninrecovr_courtorder": false,
-                          "isscrninrecovr_otherspecify": false,
-                          "scrnin_description": ""
-                        },
-                        "immediate": "Immediate",
-                        "immediateList": {
-                          "isimmed_childfaatility": true,
-                          "isimmed_seriousinjury": true,
-                          "isimmed_childleftalone": null,
-                          "isimmed_allegation": null,
-                          "isimmed_otherspecify": null,
-                          "immediateList6": null
-                        },
-                        "noImmediateList": {
-                          "isnoimmed_physicalabuse": false,
-                          "isnoimmed_sexualabuse": false,
-                          "isnoimmed_neglectresponse": false,
-                          "isnoimmed_screeninoverride": false,
-                          "isnoimmed_substantial_risk": false,
-                          "isnoimmed_risk_harm": false
-                        },
-                        "childunderoneyear": "Yes",
-                        "childUnderOneYear": "",
-                        "officerfirstname": "",
-                        "officermiddlename": "",
-                        "officerlastname": "",
-                        "badgenumber": "",
-                        "recordnumber": "",
-                        "reportdate": null,
-                        "worker": "",
-                        "comments": "",
-                        "workerdate": null,
-                        "supervisor": "",
-                        "supervisordate": null,
-                        "disqualifyingCriteria": {
-                          "issexualabuse": false,
-                          "isoutofhome": false,
-                          "isdeathorserious": false,
-                          "isrisk": false,
-                          "isreportmeets": true,
-                          "issignordiagonises": false,
-                          "ismaltreatment3yrs": false,
-                          "ismaltreatment12yrs": false,
-                          "ismaltreatment24yrs": false,
-                          "isactiveinvestigation": false
-                        },
-                        "disqualifyingFactors": {
-                          "isreportedhistory": false,
-                          "ismultiple": false,
-                          "isdomesticvoilence": false,
-                          "iscriminalhistory": false,
-                          "isthread": false,
-                          "islawenforcement": false,
-                          "iscourtiinvestigation": false
-                        },
-                        "cpsResponseType": "CPS-IR",
-                        "isar": false,
-                        "isir": true,
-                        "isfinalscreenin": "true",
-                        "allegedvictim": [{
-                          "victimname": ""
-                        }],
-                        "allegedmaltreator": [{
-                          "maltreatorsname": ""
-                        }],
-                        "provider": [{
-                          "providername": ""
-                        }],
-                        "ismalpa_suspeciousdeath": false,
-                        "ismalpa_nonaccident": false,
-                        "ismalpa_injuryinconsistent": false,
-                        "ismalpa_insjury": false,
-                        "ismalpa_childtoxic": false,
-                        "ismalpa_caregiver": false,
-                        "ismalsa_sexualmolestation": false,
-                        "ismalsa_sexualact": false,
-                        "ismalsa_sexualexploitation": false,
-                        "ismalsa_physicalindicators": false,
-                        "isneggn_suspiciousdeath": false,
-                        "isneggn_signsordiagnosis": false,
-                        "isneggn_inadequatefood": false,
-                        "isneggn_childdischarged": false,
-                        "isneggn_exposuretounsafe": false,
-                        "isneggn_inadequateclothing": false,
-                        "isneggn_inadequatesupervision": false,
-                        "isnegrh_treatmenthealthrisk": false,
-                        "isneguc_leftunsupervised": false,
-                        "isneguc_leftaloneinappropriatecare": false,
-                        "isneguc_leftalonewithoutsupport": false,
-                        "isnegrh_priordeath": false,
-                        "isnegrh_domesticviolence": false,
-                        "isnegrh_sexualperpetrator": false,
-                        "isnegrh_basicneedsunmet": false,
-                        "isnegrh_substantial_risk": false,
-                        "isscrnoutrecovr_insufficient": false,
-                        "isscrnoutrecovr_information": false,
-                        "isscrnoutrecovr_historicalinformation": false,
-                        "isscrnoutrecovr_otherspecify": false,
-                        "scrnout_description": "",
-                        "isscrninrecovr_courtorder": false,
-                        "isscrninrecovr_otherspecify": false,
-                        "scrnin_description": "",
-                        "isimmed_childfaatility": true,
-                        "isimmed_seriousinjury": true,
-                        "isimmed_childleftalone": null,
-                        "isimmed_allegation": null,
-                        "isimmed_otherspecify": null,
-                        "immediateList6": null,
-                        "isnoimmed_physicalabuse": false,
-                        "isnoimmed_sexualabuse": false,
-                        "isnoimmed_neglectresponse": false,
-                        "isnoimmed_screeninoverride": false,
-                        "isnoimmed_substantial_risk": false,
-                        "isnoimmed_risk_harm": false,
-                        "issexualabuse": false,
-                        "isoutofhome": false,
-                        "isdeathorserious": false,
-                        "isrisk": false,
-                        "isreportmeets": true,
-                        "issignordiagonises": false,
-                        "ismaltreatment3yrs": false,
-                        "ismaltreatment12yrs": false,
-                        "ismaltreatment24yrs": false,
-                        "isactiveinvestigation": false,
-                        "isreportedhistory": false,
-                        "ismultiple": false,
-                        "isdomesticvoilence": false,
-                        "iscriminalhistory": false,
-                        "isthread": false,
-                        "islawenforcement": false,
-                        "iscourtiinvestigation": false,
                         "isrecsc_screenout": false,
-                        "isrecsc_scrrenin": true
+                        "isrecsc_scrrenin": true,
+                        "datesubmitted": null
                       },
+                      "clwStatus": null,
                       "focuspersoncasedetails": [],
-                      "DAType": {
-                        "DATypeDetail": [{
-                          "ServiceRequestNumber": "I201900351313",
-                          "DaTypeKey": "247a8b26-cdee-4ce8-b36e-b37e49fd0103",
-                          "dispositioncode": "Scrnin",
-                          "DAStatus": "Review",
-                          "intakeMultipleDispositionDropdown": [{
-                            "text": "Close Case",
-                            "value": "Closed"
-                          }, {
-                            "text": "Pre Court Services",
-                            "value": "courtsrv"
-                          }, {
-                            "text": "Reject Case for legal insufficiency",
-                            "value": "rejected"
-                          }, {
-                            "text": "Screen In",
-                            "value": "Scrnin"
-                          }, {
-                            "text": "Screen Out",
-                            "value": "ScreenOUT"
-                          }, {
-                            "text": "Send to Court",
-                            "value": "sendcourt"
-                          }],
-                          "intakeserreqstatustypekey": "Review",
-                          "comments": "test",
-                          "intakeAction": "",
-                          "supStatus": "",
-                          "supComments": "",
-                          "reason": "",
-                          "caseID": "",
-                          "serviceTypeID": "",
-                          "supMultipleDispositionDropdown": []
-                        }]
-                      }
+                      "roacps": null,
+                      "userrole": "",
+                      "officelocation": "Washington"
                     },
                     "review": {
-                      "appevent": "INTR",
-                      "status": "supreview",
-                      "commenttext": "test",
-                      "ispreintake": false,
-                      "assignsecurityuserid": "eba740d3-c238-4497-a660-3b7b09e12922",
-                      "ismanualrouting": true
+                      "appevent": "DRAFT",
+                      "status": "",
+                      "commenttext": "",
+                      "ispreintake": false
                     }
                   }
                 },
