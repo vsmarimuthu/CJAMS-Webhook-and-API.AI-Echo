@@ -107,7 +107,7 @@ restService.post("/createIntake", function (req, res) {
                         "Time": "2020-07-03T16:08:47.243Z",
                          "IntakeNumber": speech,
                         "intakeservice": [],
-                        "InputSource": "b5b40aa0-d2d9-4c04-a3f6-07ed304d904c",
+                        "InputSource": "0bdda2ab-b74f-4d74-ba17-3b9b37a9cb20",
                         "RecivedDate": "7/3/2020, 9:38:16 PM",
                         "CreatedDate": "2020-07-03T16:08:16.149Z",
                         "Author": "Christina McCauley",
@@ -128,7 +128,7 @@ restService.post("/createIntake", function (req, res) {
                         "RefuseToShareZip": false,
                         "offenselocation": "",
                         "narrativeUpdatedDate": null,
-                        "communicationDescription": "Face to Face"
+                        "communicationDescription": "Google Home"
                       },
                       "narrative": [
                         { 
