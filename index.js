@@ -247,7 +247,14 @@ restService.post("/benefitsCalculator", function(req, res) {
 
     var speech = '';
     var access_token = '';
-    speech = '<speak><break strength="x-strong"/> You may not be eligible based on your income and household size. <break time=".5s"/> However, eligibility is based on many factors.</speak>';
+    if(parseInt(_Household)>4)
+    {
+        speech = '<speak><break strength="x-strong"/>You may be eligible for SNAP benefits.</speak>';
+
+    }else
+    {
+       speech = '<speak><break strength="x-strong"/> You may not be eligible based on your income and household size. <break time=".5s"/> However, eligibility is based on many factors.</speak>';
+    }
     var speechResponse = {
         google: {
             expectUserResponse: true,
