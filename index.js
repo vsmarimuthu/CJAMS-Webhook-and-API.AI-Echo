@@ -14,6 +14,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/createIntake", function(req, res) {
+    var speech = '';
+    if(req.body.queryResult.intent.displayName=='Create Account'){
     var _narrative =
         req.body.queryResult &&
         req.body.queryResult.parameters &&
@@ -44,7 +46,7 @@ restService.post("/createIntake", function(req, res) {
         req.body.queryResult.parameters.Role ?
         req.body.queryResult.parameters.Role : "";
 
-    var speech = '';
+    
     var access_token = '';
     request.post(
         'https://api-re-cw.cardinalityai.xyz/api/users/login', {
@@ -178,7 +180,7 @@ restService.post("/createIntake", function(req, res) {
                                 },
                                 function(error, response, body) {
                                     if (!error && response.statusCode == 200) {
-                                        speech = '<speak><break strength="x-strong"/> Congratulations. <break time=".5s"/> Intake has been created with Intake number <say-as interpret-as="cardinal">' + speech + '</say-as></speak>';
+                                        speech = '<speak><break strength="x-strong"/> Congratulations. <break time=".5s"/> Intake has been created with Intake number <say-as interpret-as="cardinal">' + speech + '</say-as> <break time=".5s"/>Is there anything else I can assist you with?</speak>';
                                         var speechResponse = {
                                             google: {
                                                 expectUserResponse: true,
@@ -211,6 +213,31 @@ restService.post("/createIntake", function(req, res) {
             }
         }
     );
+    }
+    else  if(req.body.queryResult.intent.displayName=='Myday')
+    {
+        speech='You have 2 appointments , 3 scheduld visits and 1 case pending review.';
+        var speechResponse = {
+            google: {
+                expectUserResponse: true,
+                richResponse: {
+                    items: [{
+                        simpleResponse: {
+                            textToSpeech: speech
+                        }
+                    }]
+                }
+            }
+        };
+        return res.json({
+            payload: speechResponse,
+            //data: speechResponse,
+            fulfillmentText: speech,
+            speech: speech,
+            displayText: speech,
+            source: "webhook-echo-sample"
+        });
+    }
 
 
 });
