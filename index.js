@@ -279,6 +279,37 @@ restService.post("/benefitsCalculator", function(req, res) {
 
 });
 
+restService.post("/continueconversation", function(req, res) {
+    
+
+    var speech = '';
+    
+        speech = '<speak><break strength="x-strong"/>You may be eligible for SNAP benefits.</speak>';
+
+   
+    var speechResponse = {
+        google: {
+            expectUserResponse: true,
+            richResponse: {
+                items: [{
+                    simpleResponse: {
+                        textToSpeech: speech
+                    }
+                }]
+            }
+        }
+    };
+    return res.json({
+        payload: speechResponse,
+        //data: speechResponse,
+        fulfillmentText: speech,
+        speech: speech,
+        displayText: speech,
+        source: "webhook-echo-sample"
+    });
+
+
+});
 
 
 restService.post("/audio", function(req, res) {
