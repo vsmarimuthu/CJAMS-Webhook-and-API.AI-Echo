@@ -180,7 +180,7 @@ restService.post("/createIntake", function(req, res) {
                                 },
                                 function(error, response, body) {
                                     if (!error && response.statusCode == 200) {
-                                        speech = '<speak><break strength="x-strong"/> Congratulations. <break time=".5s"/> Intake has been created with Intake number <say-as interpret-as="cardinal">' + speech + '</say-as> <break time=".5s"/>Is there anything else I can assist you with?</speak>';
+                                        speech = '<speak><break strength="x-strong"/> Congratulations. <break time=".5s"/> Intake has been created with Intake number <say-as interpret-as="cardinal">' + speech + '</say-as></speak>';
                                         var speechResponse = {
                                             google: {
                                                 expectUserResponse: true,
