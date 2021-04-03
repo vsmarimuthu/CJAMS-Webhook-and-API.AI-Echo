@@ -52,7 +52,7 @@ restService.post("/createIntake", function(req, res) {
         'https://api-re-cw.cardinalityai.xyz/api/users/login', {
             json: {
                 "email": "mccauley@cardinality.ai",
-                "password": "ccwis@123"
+                "password": "c2cms.ai#009"
             }
         },
         function(error, response, body) {
